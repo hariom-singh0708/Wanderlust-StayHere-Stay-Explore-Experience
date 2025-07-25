@@ -1,0 +1,28 @@
+<% layout("/layouts/boilerplate") %>
+
+<style>
+  body {
+    background: url('https://media.istockphoto.com/id/942296960/photo/broken-glass.webp?a=1&b=1&s=612x612&w=0&k=20&c=NcBwjAbTrC76VpIGJqEXH1OkfdikH3f9v7tl44IuVmU=') no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: brightness(0.9);
+  }
+
+  .error-container {
+    min-height: 70vh;
+  }
+</style>
+
+<div class="container error-container d-flex justify-content-center align-items-center">
+  <div class="alert alert-danger text-center shadow-lg p-5 w-100" style="max-width: 600px;" role="alert">
+   
+
+    <h4 class="mb-4">
+      <%= message || "Something went wrong!" %>
+    </h4>
+
+    <a href="/listings" class="btn btn-dark mb-3">
+      <i class="fa-solid fa-house me-1"></i> Back to Home
+    </a>
+    
+  </div>
+</div>

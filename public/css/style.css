@@ -1,0 +1,174 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #0d6efd;
+  background-color: #f8f9fa;
+  border-radius: 0.3rem;
+  transition: 0.2s;
+}
+
+
+/* Listing.ejs file css */
+  .listing-links {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .card {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15);
+  }
+
+  .card-img-top {
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    background-color: #f8f9fa;
+    padding: 1rem;
+  }
+
+  .card-text {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+  }
+
+  .card-text strong {
+    display: block;
+    font-size: 1.1rem;
+    color: #007bff;
+    margin-bottom: 0.25rem;
+  }
+
+  h1 {
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #343a40;
+  }
+
+
+
+/* new.ejs file css */
+ .create-container {
+    background: linear-gradient(to right, #fdfbfb, #ebedee);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.08);
+  }
+
+  .form-label {
+    font-weight: 500;
+  }
+
+  textarea.form-control {
+    resize: none;
+  }
+
+  h3 {
+    font-weight: bold;
+    color: #343a40;
+  }
+
+
+  /* Edit.ejs file css */
+  .edit-container {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  }
+
+  .edit-heading {
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #343a40;
+  }
+
+  .renderImage img{
+    max-width: 200px;
+    margin-top: 10px;
+    border-radius: 8px;
+  }
+
+
+
+
+/* Show.ejs file css */
+.show-img {
+    height: 400px;
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  .show-button {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .star-rating {
+    direction: rtl;
+    font-size: 2rem;
+    unicode-bidi: bidi-override;
+    display: inline-flex;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .star-rating input[type="radio"] {
+    display: none;
+  }
+
+  .star-rating label {
+    color: #ccc;
+    transition: color 0.2s;
+  }
+
+  .star-rating input:checked ~ label,
+  .star-rating label:hover,
+  .star-rating label:hover ~ label {
+    color: #ffc107;
+  }
+
+  h3, h4 {
+    font-weight: 700;
+    color: #343a40;
+  }
+
+  hr {
+    border-top: 2px solid #dee2e6;
+  }
+
+  .card-title {
+    color: #007bff;
+  }
+
+  .review-date {
+    font-size: 0.85rem;
+    color: gray;
+  }
+
+footer a:hover {
+  color: #0d6efd !important;
+  text-decoration: underline !important;
+}

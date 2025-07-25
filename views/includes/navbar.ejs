@@ -1,0 +1,66 @@
+<style>
+  .nav-link input{
+    border-radius: 10px;
+    padding-left: 10px;
+  }
+</style>
+
+<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm sticky-top border-bottom">
+  <div class="container-fluid px-4 py-2">
+
+    <!-- Brand -->
+    <a class="navbar-brand fw-semibold fs-4 text-primary" href="/listings">
+      <i class="fa-regular fa-compass me-2"></i>WanderLust
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible Nav Content -->
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+      <!-- Left Nav Links -->
+      <div class="navbar-nav">
+        <a class="nav-link px-3 fw-medium text-dark" href="/listings">
+          <i class="fa-solid fa-house me-1"></i>Explore
+        </a>
+        <a class="nav-link px-3 fw-medium text-dark" href="/listings/new">
+          <i class="fa-solid fa-plus me-1"></i>New Listing
+        </a>
+      </div>
+
+      <!-- Middle Search Option -->
+       <div class="navbar-nav m-auto">
+        <div class="nav-link">
+          <form action="" class="d-flex">
+            <input type="search" name="search" id="" placeholder="Search Destination">
+            <button class="btn btn-outline-danger ms-2"><i class="fa fa-search"></i> Search</button>
+          </form>
+        </div>
+       </div>
+
+      <!-- Right Auth Buttons -->
+      <div class="ms-auto d-flex align-items-center gap-3">
+        <% if (!currentUser) { %>
+          <a href="/signup" class="btn btn-outline-primary btn-sm">
+            <i class="fa-solid fa-user-plus me-1"></i>Sign Up
+          </a>
+          <a href="/login" class="btn btn-outline-success btn-sm">
+            <i class="fa-solid fa-right-to-bracket me-1"></i>Log In
+          </a>
+        <% } else { %>
+          <!-- Optional: User avatar or name -->
+          <span class="text-muted small">
+            <i class="fa-solid fa-user-circle me-1"></i>Welcome, <%= currentUser.username %>
+          </span>
+          <a href="/logout" class="btn btn-outline-danger btn-sm">
+            <i class="fa-solid fa-right-from-bracket me-1"></i>Log Out
+          </a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>

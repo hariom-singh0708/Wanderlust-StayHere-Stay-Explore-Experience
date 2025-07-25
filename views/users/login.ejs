@@ -1,0 +1,53 @@
+<% layout("/layouts/boilerplate") -%>
+
+<style>
+  body {
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  }
+</style>
+
+<div class="container d-flex justify-content-center align-items-center mt-5">
+  <div class="col-md-6 col-lg-5">
+
+    <div class="card shadow-lg border-0 rounded-4 p-4 bg-white">
+      <div class="card-body">
+
+        <h2 class="text-center text-primary fw-bold mb-4">
+          <i class="bi bi-person-fill-lock me-2"></i> Welcome Back
+        </h2>
+
+        <form action="/login" method="POST" class="needs-validation" novalidate>
+          <!-- Username -->
+          <div class="form-floating mb-3">
+            <input type="text" name="username" id="username" class="form-control" placeholder="Username" required autocomplete="username">
+            <label for="username">Username</label>
+            <div class="invalid-feedback">Please enter your username.</div>
+          </div>
+
+          <!-- Password with eye toggle -->
+          <div class="form-floating mb-4 position-relative">
+            <input type="password" name="password" id="password" class="form-control" placeholder="Password" required autocomplete="current-password">
+            <label for="password">Password</label>
+            <button type="button" class="btn btn-sm position-absolute top-50 end-0 translate-middle-y me-3 border-0 bg-transparent" onclick="togglePassword()" tabindex="-1">
+              <i id="toggleIcon" class="bi bi-eye-fill text-secondary"></i>
+            </button>
+            <div class="invalid-feedback">Please enter your password.</div>
+          </div>
+
+          <!-- Submit -->
+          <div class="d-grid">
+            <button class="btn btn-success btn-lg shadow-sm" type="submit">
+              <i class="bi bi-box-arrow-in-right me-2"></i> Login
+            </button>
+          </div>
+        </form>
+
+        <div class="text-center mt-3 small text-muted">
+          Don't have an account? <a href="/signup" class="text-success fw-semibold">Sign Up</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
